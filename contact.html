@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alpine Paradise Resort</title>
+       
+        <meta name="author" content="Kristine Strasburger">
+        <meta name="description" content="Alpine Paradise Resort in Paradise Village, Switzerland is the best place to refresh and restore your soul year-round.">
+        
+        <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+        <link rel="stylesheet" href="https://use.typekit.net/tqj0esb.css">
+
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="header-container">
+                <h1 class="company-name">
+                    <a href="index.html">Alpine Paradise Resort</a>
+                    </h1>
+
+                <nav class="nav-column" aria-label="Main">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-button">Home</a></li>
+                        <li><a href="index.html#accommodations" class="nav-button">Accommodations</a></li>
+                        <li><a href="contact.html" class="nav-button" aria-current="page">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+  
+            <div class="hero-viewport">
+                <div class="window-frame">
+                    <div class="landscape-view"
+                        role="img"
+                        aria-label="A panoramic view of alpine snowy peaks and wooded mountains enclosing a grassy valley with a stream running down the center into the distance.">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="content-plate">
+                <div class="centered-column">
+                    <h2 id="contact-heading" class="enjoy-heading">Contact Us</h2>
+                    <p class="resort-description">
+                    Please reach out to us with any questions or concerns. We are happy to help you plan your dream vacation with us!<br>
+                    Required fields marked with a <span class="required">*</span>
+                    </p>
+                </div>
+                    
+                <div class="contact-image-wrapper">
+                    <img src="images/swiss-sunset.webp" alt="Sunset-lit clouds behind the alpine mountains as a backdrop for Alpine Paradise Resort viewed from across the resort lake." class="feature-photo">
+                </div>
+
+                <form action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank" class="contact-form-grid" aria-labelledby="contact-heading">
+ 
+                    <div class="form-column">
+                        <div class="input-group">
+                            <label for="full-name">Full Name<span class="required">*</span></label>
+                            <input type="text" id="full-name" name="my-full-name" required placeholder="Full Name" autocomplete="name">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">Email Address<span class="required">*</span></label>
+                            <input type="email" id="email" name="my-email" required placeholder="YourEmail@xxx.xxx" autocomplete="email">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="phone">Phone Number<span class="required">*</span></label>
+                            <input type="tel" id="phone" name="my-phone" required placeholder="+xx xxx-xxx-xxxx" autocomplete="tel">
+                        </div>
+                    </div>
+
+                    <div class="form-column">
+                        <fieldset class="radio-group" role="radiogroup">
+                            <p class="radio-group-title">Preferred Contact Method<span class="required">*</span></p>
+                            <label><input type="radio" name="my-contact-pref" value="email" checked>Email</label>
+                            <label><input type="radio" name="my-contact-pref" value="phone">Phone</label>
+                        </fieldset>
+
+                        <div class="input-group">
+                            <label for="comments">Comments<span class="required">*</span></label>
+                            <textarea id="comments" name="my-comments" rows="4" required placeholder="What will make your stay the best it can be?"></textarea>
+                        </div>
+
+                        <button type="submit" class="my-submit-button">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+                <div class="footer-content">
+                    <p>Copyright &copy;2023 - Alpine Paradise Resort</p>
+                    <p>This site is for educational purposes only</p>
+                </div>
+        </footer>
+    </body>
+</html>

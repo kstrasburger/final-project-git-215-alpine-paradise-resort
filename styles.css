@@ -1,0 +1,638 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+    /*------------ END OF CSS RESET CODE --------------*/
+
+    /*------- GLOBAL LAYOUT RESET ADJUSTMENTS ---------*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--dk-green);
+}
+
+p {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--dk-green);
+}
+
+header, nav {
+    font-family: var(--font-header);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+}
+
+   /*--- CUSTOM SCROLLBAR ------------*/
+
+   ::-webkit-scrollbar {
+    width: 12px;
+   }
+
+::-webkit-scrollbar-track {
+    background: var(--dk-green);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--lt-green);
+    border: 3px solid var(--dk-green);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--med-green);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--med-green) var(--dk-green);
+}
+
+    /*--- CSS VARIABLES ------------*/
+
+:root {
+
+    /*--- FONTS -------------*/
+
+    --font-header: "nimbus-sans", "Helvetica Neue", "Arial", sans-serif;
+    --font-heading: "ivypresto-display", "Times New Roman", serif;
+    --font-body: "ivypresto-text", "Georgia", serif;
+
+    /*--- COLORS ------------*/
+
+   --lt-stone: #f2f2f2;
+   --lt-blue: #bddef2;
+   --dk-green: #6f736e;
+   --med-green: #97a681;
+   --lt-green: #b8bf84;
+   --dk-orange: #e57a74;
+}
+
+    /*--- BASE STYLES ------------*/
+
+body {
+    background-image: url('images/grey-slate-background.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #33363b;
+    font-family: var(--font-body);
+    color: var(--dk-green);
+    line-height: 1.8;
+    overflow-x: hidden;
+
+}
+
+    /*--- HEADER STYLES ------------*/
+
+header {
+    background-color: var(--lt-stone);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 30px;
+    margin-bottom: 2px;
+    border-bottom: 2px solid var(--dk-green);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px 30px 50px;
+}
+
+.hero-viewport {
+    padding: 0 50px 60px 50px;
+}
+
+.window-frame {
+    background: linear-gradient(145deg, #777b76, var(--dk-green));
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 1px 1px 1px rgba(255, 255, 255, 0.2),0 0 15px rgba(184, 191, 132, 0.1);
+}
+
+.landscape-view {
+    height: 50vh;
+    background-image: url('images/swiss-valley.webp');
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.company-name {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--dk-green);
+    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.2), 1px 1px 0px #ffffff;
+}
+
+.company-name a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.company-name a:hover {
+    color: var(--med-green);
+    transition: color 0.3s ease;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-button {
+    display: inline-block;
+    font-family: var(--font-header);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    color: var(--lt-stone);
+    background: linear-gradient(145deg, #777b76, #646863);
+    padding: 12px 28px;
+    border-radius: 3px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -1px -1px 2px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    color: var(--lt-green);
+    background: var(--dk-green);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4), inset -1px -1px 2px rgba(255, 255, 255, 0.01), 0 0 15px rgba(184, 191, 132, 0.4);
+    transform: translateY(1px);
+}
+
+    /*--- MAIN CONTENT STYLES ------------*/
+
+.content-plate {
+    background-color: var(--lt-stone);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    box-shadow: 10px 0 30px -10px rgba(0, 0, 0, 0.3), -10px 0 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.feature-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 3px solid var(--dk-green);
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(111, 115, 110, 0.1);
+    filter: contrast(105%) brightness(102%);
+    transition: none;
+}
+
+.centered-column {
+    max-width: 65%;
+    margin: 0 auto 80px auto;
+    padding-top: 120px;
+    text-align: center;
+}
+
+.resort-description {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--dk-green);
+    text-align: left;
+    margin-top: 30px;
+    hyphens: none;
+}
+
+.inset-features {
+    padding: 0 12%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.content-group {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.group-image  {
+    flex: 1.5;
+    margin-top: 65px;
+}
+
+.group-text {
+    flex: 1;
+}
+
+.group-text h3 {
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    color: var(--dk-green);
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.enjoy-heading {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--dk-green);
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.enjoy-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--lt-green);
+    border-radius: 2px;
+}
+
+    /*--- CONTACT FORM STYLES ------------*/
+
+.contact-image-wrapper {
+    max-width: 76%;
+    margin: 40px auto 80px auto;
+    padding: 0;
+}
+
+
+.contact-form-grid {
+    display: flex;
+    gap: 60px;
+    padding: 0 12%;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.form-column {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-group label {
+    font-family: var(--font-header);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    color: var(--dk-green);
+    line-height: 1.2;
+}
+
+.required {
+    color: var(--dk-orange);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.contact-form-grid input[type="text"],
+.contact-form-grid input[type="email"],
+.contact-form-grid input[type="tel"],
+.contact-form-grid textarea {
+    padding: 12px;
+    border: 3px solid var(--dk-green);
+    background-color: #ffffff;
+    border-radius: 3px;
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form-grid textarea {
+    min-height: 9rem;
+    resize: vertical;
+}
+
+.contact-form-grid input:hover,
+.contact-form-grid textarea:hover {
+    border-color: var(--dk-orange);
+    cursor: pointer;
+
+}
+
+.contact-form-grid input:focus,
+.contact-form-grid textarea:focus {
+    outline: none !important;
+    border: 3px solid var(--lt-blue) !important;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(189, 222, 242, 0.5), inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.contact-form-grid input:placeholder-shown,
+.contact-form-grid textarea:placeholder-shown {
+    border:3px solid var(--dk-green);
+}
+
+.contact-form-grid input:invalid:not(:placeholder-shown),
+.contact-form-grid textarea:invalid:not(:placeholder-shown) {
+    border: 3px solid var(--dk-orange);
+    box-shadow: 0 0 5px rgba(229, 122, 116, 0.2);
+}
+
+.radio-group {
+    border: 3px solid var(--dk-green);
+    border-radius: 4px;
+    background-color: rgba(111, 115, 110, 0.03);
+    width: 100%;
+    position: relative;
+    padding: 15px 25px 25px 25px;
+    margin-top: 32px;
+}
+
+.radio-group input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    vertical-align: middle;
+    background-image: url('images/radio-off.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 12px;
+    transition: filter 0.3s ease;
+}
+
+.radio-group input[type="radio"]:checked {
+    background-image: url('images/radio-on.png');
+    filter: drop-shadow(0 0 5px rgba(184, 191, 132, 0.5));
+    transform: scale(1.1);
+}
+
+.radio-group label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 35px;
+    font-family: var(--font-header);
+    font-size: 1.2rem;
+    color: var(--dk-green);
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.radio-group-title {
+    position: absolute;
+    top: -42px;
+    left: 0;
+    font-family: var(--font-header);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    color: var(--dk-green);
+}
+
+.radio-group label:hover {
+    transform: translateY(-5px);
+    color: var(--lt-green);
+}
+
+.radio-group label:hover input[type="radio"] {
+    filter: drop-shadow(0 0 8px var(--lt-green)) brightness(1.2);
+}
+
+.my-submit-button {
+    margin-top: 20px;
+    padding: 18px 30px;
+    background: var(--dk-green);
+    color: var(--lt-stone);
+    font-family: var(--font-header);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 0.15em;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.my-submit-button:hover {
+    background-color: var(--lt-blue);
+    color: var(--dk-green);
+    box-shadow: inset 0 0 0 3px var(--dk-green), 0 8px 20px rgba(189, 222, 242, 0.5);
+    transform: translateY(-2px);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+    /*--- FOOTER STYLES ------------*/
+
+footer {
+    background-color: var(--dk-green);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    text-align: center;
+    border-top: none;
+    box-shadow: 15px 15px 35px -15px rgba(0, 0, 0, 0.3), -15px 15px 35px -15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content p {
+    font-family: var(--font-header);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 1.15rem;
+    color: var(--lt-stone);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+.footer-content p:last-child {
+    font-size: 1rem;
+    color: var(--lt-stone);
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+    /*--- RESPONSIVE MEDIA STYLES ------------*/
+
+    @media (max-width: 1000px) {
+
+        .landscape-view {
+            height: 30vh;
+            min-height: 200px;
+        }
+
+        .hero-viewport {
+            padding: 0 20px 40px 20px;
+        }
+
+        .header-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+            gap: 25px;
+        }
+
+        .company-name {
+            font-size: 1.8rem;
+            line-height: 1.1;
+        }
+
+        .nav-list {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .nav-button {
+            width: 100%;
+            max-width: 250px;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+        }
+
+        .inset-features, .contact-image-wrapper, .contact-form-grid {
+            padding: 0 5%;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-image-wrapper {
+            margin-bottom: 50px;
+        }
+
+        .content-group {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .group-text {
+            width: 100%;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .group-image {
+            margin-top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .centered-column {
+            max-width: 100%;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 60px;
+            margin-bottom: 40px;
+        }
+
+        .contact-form-grid {
+            flex-direction: column;
+            align-items: stretch;
+            text-align: left;
+            gap: 30px;
+        }
+
+        .radio-group {
+            position: static;
+            margin-top: 20px;
+            padding-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .radio-group-title {
+            position: static;
+            display: block;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 15px;
+            top: auto;
+            left: auto;
+        }
+    }
